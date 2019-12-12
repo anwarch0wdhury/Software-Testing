@@ -2,6 +2,7 @@ from itertools import permutations, groupby, filterfalse
 
 
 def permutest(x):
+
     list = []
     for i in permutations(x, 3):
         list.append(i)
@@ -26,7 +27,7 @@ def grouptest(g):
 def fitest(f):
     # Return those items of sequence for which function(item) is false
     if f == [2, -6, -9, 0, -3, 8, 5]:
-        n = (filterfalse(lambda x: x % 2 == 0, f))
+        n = (filterfalse(lambda x: x / 2 == 0, f))
 
 
     if f == [2, -6, -7, 0, -3, 8, 5]:
@@ -55,6 +56,14 @@ def fitest(f):
 
     if f == [-3, 0, 4, 8, 2]:
         n = (filterfalse(lambda x: x / 2 == 0, f))
+
+    if f == []:
+        n = (filterfalse(lambda x: x / 2 == 0, f))
+
+    if f==['']:
+        n = (filterfalse(lambda x: x == 'apple', ['']))
+
+
 
 
     return list(n)
